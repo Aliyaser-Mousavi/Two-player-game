@@ -11,7 +11,6 @@ const btnNew = document.querySelector('.btn--new');
 const btnRoll = document.querySelector('.btn--roll');
 const btnHold = document.querySelector('.btn--hold');
 const winnerMsg = document.querySelector('.winner-message');
-
 const soundRoll = new Audio('/click.mp3');
 const soundHold = new Audio('/hold.mp3');
 const soundWin = new Audio('/win.mp3');
@@ -50,7 +49,7 @@ btnRoll.addEventListener('click', function () {
     soundRoll.play();
     const dice = Math.trunc(Math.random() * 6) + 1;
     diceEl.classList.remove('hidden');
-    diceEl.src = `dice-${dice}.png`;
+    diceEl.src = `dice-${dice}.jpg`;
     diceEl.classList.add('roll');
     setTimeout(() => diceEl.classList.remove('roll'), 500);
     if (dice !== 1) {
